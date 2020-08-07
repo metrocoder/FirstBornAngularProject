@@ -1,0 +1,21 @@
+
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col-sm-4 col-lg-2">#</th>
+          <th scope="col-sm-4 col-lg-5">User</th>
+          <th scope="col-sm-4 col-lg-5">More Details</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let customer of customers">
+            <td>{{customer.cId}}</td>
+            <td [innerHtml]="customer.username | uppercase"></td>
+            <td>
+            <button ngbButton class="btn-primary">{{customer.username}} Details</button>
+            </td>
+        </tr>
+        </tbody>
+      </table>
+</div>
